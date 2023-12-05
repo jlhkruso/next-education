@@ -1,18 +1,8 @@
 import HeaderLink from "./headerLink";
+import { fetchNavigation } from "@/app/lib/cms/fetchNavigation";
 
-async function getData(): Promise<any> {
-  try {
-    const res = await fetch(
-      "https://656de3a9bcc5618d3c2429ff.mockapi.io/navigation",
-    );
-    return res.json();
-  } catch (error: any) {
-    // Serialize the error into a plain object
-    return { error: { message: error.message } };
-  }
-}
 export default async function Header() {
-  const data = await getData();
+  const data = await fetchNavigation();
   return (
     <header>
       <ul>

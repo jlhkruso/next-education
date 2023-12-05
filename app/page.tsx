@@ -1,7 +1,11 @@
-export default function Home() {
+import { fetchFrontpage } from "@/app/lib/cms/fetchFrontpage";
+
+export default async function Home() {
+  const data = await fetchFrontpage();
+  console.log("data", data);
   return (
     <main>
-      <h1>Frontpage</h1>
+      <div>frontpage</div>
     </main>
   );
 }
