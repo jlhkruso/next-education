@@ -3,16 +3,17 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import clsx from "clsx";
 
-export default function Header({ data }: any) {
+const Header: React.FC<Global.ISlug> = ({ slug, slugTitle }) => {
   const pathname = usePathname();
   return (
     <Link
-      href={data.path}
+      href={slug}
       className={clsx("navigation__item", {
-        "is-active": pathname === data.path,
+        "is-active": pathname === "/" + slug || slug === pathname,
       })}
     >
-      {data.title}
+      {slugTitle}
     </Link>
   );
-}
+};
+export default Header;

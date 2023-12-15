@@ -2,12 +2,11 @@
 import { RTE } from "@/app/ui/atoms/rte/rte";
 import { AtomImage } from "@/app/ui/atoms/image/image";
 // style
-import clsx from "clsx";
-import styles from "@/app/ui/sections/hero/hero.module.scss";
+import styles from "./hero.module.scss";
 
 export const Hero = ({ data }: Hero.IData) => {
   return (
-    <div className={clsx(styles.hero)}>
+    <div className={styles.hero}>
       {data.heroTitle && <h1>{data.heroTitle}</h1>}
       {data.heroBodytext && <RTE htmlContent={data.heroBodytext} />}
       {data.heroImage && (

@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 // style
-import clsx from "clsx";
 import "@/styles/main.scss";
-import grid from "@/styles/base/grid.module.scss";
+import gridStyle from "@/styles/base/grid.module.scss";
 // components
 import Header from "@/app/ui/layout/header/header";
 
@@ -19,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
-        <div className={clsx(grid.wrap)}>
+        <div className={gridStyle.wrap}>
           <Header />
           {children}
         </div>

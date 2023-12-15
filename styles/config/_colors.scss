@@ -1,1 +1,9 @@
-$color-dark: black;
+$color-dark: #283618;
+$color-light: #f0efeb;
+
+// transitions
+$cubic-bezier: cubic-bezier(0.65, 0.05, 0.36, 1);
+
+$transition: 0.25s $cubic-bezier;
+$transition--fast: 0.18s $cubic-bezier;
+$transition--slow: 0.4s $cubic-bezier;

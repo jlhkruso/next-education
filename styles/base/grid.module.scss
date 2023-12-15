@@ -23,7 +23,7 @@
 }
 
 @for $i from 1 through $col {
-  .col-#{$i} {
+  .col#{$i} {
     grid-column-end: span $i;
   }
 }
@@ -34,7 +34,7 @@
 {
   @media (min-width: $size) {
     @for $i from 1 through $col {
-      .col-#{$abbr}-#{$i} {
+      .col#{$abbr}#{$i} {
         grid-column-end: span $i;
       }
     }
@@ -43,7 +43,7 @@
 
 // "start"
 @for $i from 1 through $col {
-  .col-start-#{$i} {
+  .colStart#{$i} {
     grid-column-start: $i;
   }
 }
@@ -54,7 +54,7 @@
 {
   @media (min-width: $size) {
     @for $i from 1 through $col {
-      .col-start-#{$abbr}-#{$i} {
+      .colStart#{$abbr}#{$i} {
         grid-column-start: $i;
       }
     }

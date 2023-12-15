@@ -1,4 +1,9 @@
 declare namespace Global {
+  // hero
+  export interface IHero {
+    hero: Global.IHero;
+  }
+  // RTE
   interface IHtml {
     html: string;
   }
@@ -13,5 +18,16 @@ declare namespace Global {
   export interface IError {
     error: string;
     reset?: function;
+  }
+  // settings
+  export interface ISlug {
+    slug: string;
+    slugTitle: string;
+  }
+  export interface ISettings {
+    setting: {
+      logo: Global.IImage;
+      navigation: Global.ISlug[];
+    };
   }
 }
