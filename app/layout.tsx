@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
+// style
+import clsx from "clsx";
 import "@/styles/main.scss";
+import grid from "@/styles/base/grid.module.scss";
+// components
 import Header from "@/app/ui/layout/header/header";
 
 export const metadata: Metadata = {
@@ -15,8 +19,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
-        <Header />
-        {children}
+        <div className={clsx(grid.wrap)}>
+          <Header />
+          {children}
+        </div>
       </body>
     </html>
   );

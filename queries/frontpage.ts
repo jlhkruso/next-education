@@ -10,7 +10,12 @@ export const gql_frontpage = gql`
             html
           }
           heroImage {
-            id
+            ... on Image {
+              image {
+                url
+              }
+              alt
+            }
           }
         }
       }

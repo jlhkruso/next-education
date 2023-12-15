@@ -1,10 +1,10 @@
 "use client";
 import { useEffect } from "react";
 
-export default function Error({ error, reset }: any) {
+export default function Error({ error, reset }: Global.IError) {
   useEffect(() => {
     // Log the error to an error reporting service
-    console.error(error);
+    console.error("error from /breaking folder", error);
   }, [error]);
 
   return (

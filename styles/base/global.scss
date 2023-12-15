@@ -1,4 +1,10 @@
 @import "@/styles/config/_colors.scss";
 body {
   color: $color-dark;
+  font-family: sans-serif, "Courier New", Courier, monospace;
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
 }

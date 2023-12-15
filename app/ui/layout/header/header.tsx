@@ -6,7 +6,7 @@ export default async function Header() {
   return (
     <header>
       <ul>
-        {data.map((item: any) => (
+        {data.map((item) => (
           <li key={item.id}>
             <HeaderLink data={item} />
           </li>
