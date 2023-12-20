@@ -1,5 +1,10 @@
 import Image from "next/image";
-export const AtomImage = ({ src, alt, width, height }: Image.IProps) => {
+export const AtomImage = ({
+  src,
+  alt,
+  width = 500,
+  height = 250,
+}: Image.IProps) => {
   return (
     <Image
       src={src} // Path to the image
