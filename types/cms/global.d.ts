@@ -1,8 +1,4 @@
 declare namespace Global {
-  // hero
-  export interface IHero {
-    hero: Global.IHero;
-  }
   // RTE
   interface IHtml {
     html: string;

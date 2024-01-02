@@ -1,10 +1,20 @@
 import { gql } from "graphql-request";
 
-export const gql_newsList = gql`
-  query ($skip: Int!) {
-    newsPages(first: 2, orderBy: createdDate_DESC, skip: $skip) {
+export const gql_news = gql`
+  query getSingleNews($slug: String!) {
+    newsPage(where: { slug: $slug }) {
       createdDate
-      slug
+      meta {
+        ... on Meta {
+          title
+          description
+          ogTitle
+          ogDescription
+          ogImage {
+            id
+          }
+        }
+      }
       hero {
         ... on Hero {
           heroTitle

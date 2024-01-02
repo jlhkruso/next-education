@@ -1,6 +1,7 @@
 declare namespace NewsList {
   export interface INews {
     createdDate: string;
+    slug: string;
     hero: Hero.IProps;
   }
   export interface INewsPages {

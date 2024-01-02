@@ -1,5 +1,5 @@
 declare namespace NewsOverview {
   export interface IPage {
-    newsOverview: Global.IHero;
+    newsOverview: { hero: Hero.IProps };
   }
 }
