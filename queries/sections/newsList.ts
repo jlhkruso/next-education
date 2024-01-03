@@ -1,8 +1,8 @@
 import { gql } from "graphql-request";
 
 export const gql_newsList = gql`
-  query ($skip: Int!) {
-    newsPages(first: 2, orderBy: createdDate_DESC, skip: $skip) {
+  query {
+    newsPages(orderBy: createdDate_DESC) {
       createdDate
       slug
       hero {

@@ -28,6 +28,12 @@ export default async function Header() {
                 <HeaderLink slug={item.slug} slugTitle={item.slugTitle} />
               </li>
             ))}
+          <li className={`${style.header__Item}`}>
+            <HeaderLink slug="/use-state" slugTitle="use state" />
+          </li>
+          <li className={`${style.header__Item}`}>
+            <HeaderLink slug="/redux-toolkit" slugTitle="redux toolkit" />
+          </li>
         </ul>
       </div>
     </header>

@@ -1,6 +1,5 @@
 // components
 import { NewsListItem } from "./newsListItem";
-import { PaginationComponent } from "./newsListPagination";
 // lib
 import { fetchNewsList } from "@/app/lib/cms/fetchNewsList";
 // style
@@ -9,7 +8,7 @@ import styleReset from "@/styles/base/reset.module.scss";
 import styleGrid from "@/styles/base/grid.module.scss";
 
 export const NewsList = async () => {
-  const initialData = await fetchNewsList(0);
+  const initialData = await fetchNewsList();
 
   return (
     <div className={`${styles.newsList}`}>
@@ -26,7 +25,6 @@ export const NewsList = async () => {
           ))}
         </ul>
       )}
-      <PaginationComponent initialData={initialData.newsPages} />
     </div>
   );
 };
