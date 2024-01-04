@@ -1,2 +1,32 @@
-.newsList {
+@import "@/styles/config/_mixins.scss";
+.userValid {
+  &__field {
+    margin: 2rem 0;
+  }
+  &__new {
+    input:user-valid,
+    select:user-valid,
+    textarea:user-valid {
+      @include validInput;
+    }
+
+    input:user-invalid,
+    select:user-invalid,
+    textarea:user-invalid {
+      @include invalidInput;
+    }
+  }
+  &__old {
+    input:valid,
+    select:valid,
+    textarea:valid {
+      @include validInput;
+    }
+
+    input:invalid,
+    select:invalid,
+    textarea:invalid {
+      @include invalidInput;
+    }
+  }
 }

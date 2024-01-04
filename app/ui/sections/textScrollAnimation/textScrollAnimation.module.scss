@@ -1,0 +1,30 @@
+@import "@/styles/config/_mixins.scss";
+.textScrollAnimation {
+  position: fixed;
+  font-size: 1.25em;
+  width: 90vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+
+  --chars: 600;
+  span {
+    background: red linear-gradient(to right, #6300ff 0%, #e915c7 100%) 0 / 0
+      no-repeat;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: text steps(var(--chars)) forwards;
+    animation-timeline: scroll(root);
+    font-size: clamp(20px, 12vw, 60px);
+  }
+}
+@keyframes text {
+  0% {
+    background-size: 0ch;
+  }
+  100% {
+    background-size: calc(var(--chars) * 1ch);
+  }
+}
