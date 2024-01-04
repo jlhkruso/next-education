@@ -6,8 +6,7 @@ import gridStyle from "@/styles/base/grid.module.scss";
 import Header from "@/app/ui/layout/header/header";
 
 // store
-import { store } from "@/app/store";
-import { Provider } from "react-redux";
+import { Providers } from "@/app/redux/provider";
 
 export const metadata: Metadata = {
   title: "Learning next",
@@ -22,12 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning={true}>
-        <Provider store={store}>
-          <div className={gridStyle.wrap}>
-            <Header />
-            {children}
-          </div>
-        </Provider>
+        <div className={gridStyle.wrap}>
+          <Header />
+          <Providers>{children}</Providers>
+        </div>
       </body>
     </html>
   );
